@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Pawtio</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">
+      <span class="paw">🐾</span>
+      Pawtio
+    </a>
+  </header>
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: July 16, 2026</p>
+
+    <h2>What Pawtio is</h2>
+    <p>
+      Pawtio is a pet health tracker. Its core job is to help you capture what happens at your
+      pet's vet visits — by recording and transcribing the conversation — and turn that into a
+      clear, organized summary you can refer back to. Pawtio organizes what your vet says; your
+      vet makes the calls. Pawtio is not a diagnostic tool and does not provide veterinary
+      advice.
+    </p>
+
+    <h2>Information we collect</h2>
+    <p>
+      <strong>Account information.</strong> When you create an account, we collect your email
+      address and a password (or, if you sign in with Apple or Google once that's enabled, the
+      identity information those providers share with us). We use this to authenticate you and
+      secure your account.
+    </p>
+    <p>
+      <strong>Pet profile information.</strong> Information you enter about your pet: name,
+      species, breed, existing conditions, allergies, insurance details, weight history, and
+      your primary vet's contact information.
+    </p>
+    <p><strong>Visit information.</strong> When you record a vet visit:</p>
+    <ul>
+      <li>
+        <strong>Audio.</strong> Your recording is transcribed entirely on your device — the
+        audio itself never leaves your device to reach our servers. If you choose to keep the
+        recording (the default, changeable per-visit or as a default preference in Settings),
+        it's stored locally on your device only, so you can play it back later. We never receive
+        or store your audio.
+      </li>
+      <li>
+        <strong>Transcript text.</strong> Only the text transcript of your recording is sent to
+        our servers, so it can be summarized.
+      </li>
+      <li>
+        <strong>AI-generated summary.</strong> The transcript is sent to Google's Gemini API (via
+        our own server, not directly from your device) to generate a structured summary —
+        diagnosis, medications, follow-ups, watch-for items. This summary, and the transcript it
+        was built from, are stored in our database, tied to your account.
+      </li>
+      <li>
+        <strong>Medications, lab results, vaccines, and appointments</strong> you add or that get
+        extracted from a visit summary, including any lab report files/images you upload.
+      </li>
+      <li>
+        <strong>Visit cost</strong> you optionally enter, and any pre-visit questions you write
+        for your vet.
+      </li>
+    </ul>
+    <p>
+      <strong>What we don't collect.</strong> We don't use analytics or crash-reporting SDKs,
+      ad-tracking libraries, or location tracking. We don't access your contacts, photos beyond
+      what you explicitly attach (e.g. a lab report), or any device data beyond what's needed to
+      run the app.
+    </p>
+
+    <h2>How we use your information</h2>
+    <p>
+      We use your information to: run the app's core features (organizing your pet's records,
+      generating visit summaries, tracking medications/labs/vaccines, reminders); secure your
+      account; and respond to you if you contact support. We do not sell your information, and
+      we do not use it for advertising.
+    </p>
+
+    <h2>Who we share information with</h2>
+    <p>
+      We use a small number of service providers to run Pawtio. We don't sell your data to
+      anyone, and we don't share it for their own marketing purposes.
+    </p>
+    <ul>
+      <li>
+        <strong>Supabase</strong> — our database, authentication, and file storage provider. Your
+        account data, pet records, visit summaries, and any uploaded lab files are stored on
+        Supabase's infrastructure.
+      </li>
+      <li>
+        <strong>Google (Gemini API)</strong> — receives the text transcript of a visit (not
+        audio) to generate the structured summary. Google's use of this data is governed by
+        their own API terms.
+      </li>
+      <li>
+        <strong>Apple</strong> — if you use Sign in with Apple, or when Apple's App
+        Store/TestFlight infrastructure delivers and updates the app on your device.
+      </li>
+    </ul>
+    <p>
+      We may also disclose information if required by law, or to protect the rights, property,
+      or safety of Pawtio, our users, or others.
+    </p>
+
+    <h2>Data retention and your choices</h2>
+    <ul>
+      <li>
+        <strong>Audio</strong>: kept on your device only (never on our servers) until you delete
+        it — either per-recording or by turning off the "keep recordings" default in Settings.
+        Deleting a recording removes it from your device permanently.
+      </li>
+      <li>
+        <strong>Account data export</strong>: you can export a full copy of your data (pets,
+        visits, medications, labs, vaccines, appointments) as a file from Settings at any time.
+      </li>
+      <li>
+        <strong>Account deletion</strong>: you can delete your account from Settings. This
+        permanently deletes your account and all associated pet and visit data from our servers,
+        including uploaded lab files. This cannot be undone.
+      </li>
+    </ul>
+
+    <h2>Security</h2>
+    <p>
+      Your data is protected by database-level access rules that ensure only you (or another
+      authorized account holder for a shared pet) can read or write your pet's records. All
+      network traffic between the app and our servers is encrypted (HTTPS/TLS). Your login
+      session is stored securely using your device's built-in secure storage (iOS Keychain).
+    </p>
+
+    <h2>Children's privacy</h2>
+    <p>
+      Pawtio is not directed at, and we do not knowingly collect information from, children
+      under 13.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If we make material changes to this policy, we'll update the "Last updated" date above
+      and, for significant changes, notify you in the app.
+    </p>
+
+    <h2>Contact us</h2>
+    <p>
+      Questions about this policy or your data can be sent to
+      <a href="mailto:support@pawtio.app">support@pawtio.app</a>.
+    </p>
+
+    <p class="doc-links">
+      <a href="/">Pawtio</a> &nbsp;·&nbsp; <a href="/terms">Terms of Service</a>
+    </p>
+  </main>
+</body>
+</html>
