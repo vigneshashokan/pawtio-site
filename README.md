@@ -12,6 +12,7 @@ the `pawtio-app` repo (see PR #194 there) — if those change, update the HTML h
 - `index.html` — root landing page
 - `privacy/index.html` — served at `/privacy`
 - `terms/index.html` — served at `/terms`
+- `delete-account/index.html` — served at `/delete-account`; Google Play's account-deletion URL
 - `CNAME` — tells GitHub Pages to serve this at the custom domain `pawtio.app`
 
 ## DNS
