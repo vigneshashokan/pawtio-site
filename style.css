@@ -39,18 +39,6 @@ header .brand {
   text-decoration: none;
 }
 
-header .paw {
-  width: 26px;
-  height: 26px;
-  border-radius: 8px;
-  background: var(--primary);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--bg);
-  font-size: 0.85rem;
-}
-
 main {
   max-width: 680px;
   margin: 0 auto;

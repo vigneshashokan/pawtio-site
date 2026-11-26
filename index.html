@@ -1,36 +1,614 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pawtio</title>
-  <link rel="stylesheet" href="/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pawtio — Every vet visit, remembered</title>
+<meta name="description" content="Pawtio is a calm, chronic-care-first pet health tracker for iPhone. Record your vet visit, get a clear summary, and walk into the next visit prepared.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F6F4EC}
+*{box-sizing:border-box}
+a{color:#4C6643}a:hover{color:#3F5638}
+h1,h2,h3{text-wrap:balance}
+p,li{text-wrap:pretty}
+:focus-visible{outline:2px solid #5E7A52;outline-offset:3px}
+</style>
 </head>
 <body>
-  <header>
-    <a class="brand" href="/">
-      <span class="paw">🐾</span>
-      Pawtio
-    </a>
-  </header>
-  <main>
-    <h1>Pawtio</h1>
-    <p class="meta">A calm, chronic-care-first pet health tracker.</p>
-    <p>
-      Pawtio helps you capture what happens at your pet's vet visits and turn it into a clear,
-      trustworthy summary you can carry forward to the next one.
-    </p>
-    <div class="stance">
-      Pawtio organizes what your vet says; your vet makes the calls. Pawtio is not a diagnostic
-      tool and does not provide veterinary advice.
-    </div>
-    <p class="doc-links">
-      <a href="/privacy">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms">Terms of Service</a>
-      &nbsp;·&nbsp; <a href="/delete-account">Delete your account</a>
-    </p>
-  </main>
-  <footer>
-    Questions? <a href="mailto:support@pawtio.app">support@pawtio.app</a>
-  </footer>
+<div style="font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #2B2B26; background: #F6F4EC; -webkit-font-smoothing: antialiased;">
+<header style="width: 100%; box-sizing: border-box; font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #2B2B26; background: #F6F4EC; border-bottom: 1px solid #E4E0D5;">
+<div style="max-width: 1248px; margin: 0 auto; padding: 14px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px;">
+<a href="/" aria-label="Pawtio home" style="display: inline-block; padding: 2px; color: #2B2B26; text-decoration: none; font-size: 30px; font-weight: 750; letter-spacing: -0.035em; line-height: 1;">
+<img src="/assets/wordmark.png" alt="" width="104" height="37" style="display: block; height: 37px; width: auto;">
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin-left: auto;">
+<a href="/features/" style="padding: 10px 14px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; color: #55544D; background: transparent;">Features</a>
+<a href="/about/" style="padding: 10px 14px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; color: #55544D; background: transparent;">About</a>
+<a href="/faq/" style="padding: 10px 14px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; color: #55544D; background: transparent;">FAQ</a>
+<a href="/contact/" style="padding: 10px 14px; border-radius: 999px; font-size: 15px; font-weight: 600; text-decoration: none; color: #55544D; background: transparent;">Contact</a>
+<a href="https://apps.apple.com/app/id6791683099" style="margin-left: 10px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px 0 15px; border-radius: 999px; background: #5E7A52; color: #FFFFFF; font-size: 15px; font-weight: 650; text-decoration: none;">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none;"><rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect><path d="M11 18.5h2"></path></svg>
+Get the app
+</a>
+</nav>
+</div>
+</header>
+<main>
+
+<section aria-labelledby="hero-title" style="padding: 48px 24px 96px; overflow: hidden;">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 56px 64px;">
+<div style="flex: 1 1 500px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 28px;">
+<a href="/features/#care-circle" style="display: inline-flex; align-items: center; gap: 10px; padding: 5px 14px 5px 5px; border-radius: 999px; background: #FDFCF8; border: 1px solid #E2DED2; color: #2B2B26; font-size: 14px; font-weight: 600; text-decoration: none;">
+<span style="padding: 4px 10px; border-radius: 999px; background: #E1E7D9; color: #3F5638; font-size: 12px; font-weight: 700;">New</span>
+<span>Care circles: share every pet with family</span>
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none;"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg>
+</a>
+<h1 id="hero-title" style="margin: 0; font-size: clamp(46px, 6.4vw, 84px); line-height: 1; letter-spacing: -0.04em; font-weight: 750;">Every vet visit, remembered.</h1>
+<p style="margin: 0; max-width: 540px; font-size: clamp(18px, 1.7vw, 21px); line-height: 1.55; color: #55544D;">Record the consult and Pawtio turns it into a clear summary of what your vet said. Track meds, labs, vaccines and weight, and walk into the next visit prepared.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<a href="https://apps.apple.com/app/id6791683099" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 26px 0 22px; border-radius: 999px; background: #5E7A52; color: #FFFFFF; font-size: 17px; font-weight: 650; text-decoration: none; box-shadow: 0 10px 24px -10px rgba(62, 85, 55, 0.55);">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none;"><rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect><path d="M11 18.5h2"></path></svg>
+Get Pawtio for iPhone
+</a>
+<a href="#how" style="display: inline-flex; align-items: center; gap: 8px; min-height: 54px; padding: 0 24px; border-radius: 999px; border: 1.5px solid #CFCABD; color: #2B2B26; font-size: 17px; font-weight: 600; text-decoration: none;">See how it works</a>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: 15px; color: #55544D;">
+<li style="display: flex; align-items: center; gap: 8px;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: #5E7A52; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; flex: none;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>Free on the App Store</li>
+<li style="display: flex; align-items: center; gap: 8px;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: #5E7A52; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; flex: none;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>Built for chronic care</li>
+<li style="display: flex; align-items: center; gap: 8px;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: #5E7A52; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; flex: none;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>Audio never leaves your phone</li>
+</ul>
+</div>
+<div style="flex: 1 1 420px; min-width: 0; display: flex; justify-content: center;">
+<div style="position: relative; width: 340px; max-width: 100%; height: 660px;">
+<div aria-hidden="true" style="position: absolute; left: 50%; top: 50%; width: 540px; height: 540px; margin: -270px 0 0 -270px; border-radius: 50%; background: #E3E9DC;"></div>
+<div style="position: absolute; left: 50%; top: 30px; margin-left: -140px;">
+<div role="img" aria-label="Pawtio's Today screen for Luna: a Record vet visit button, today's doses showing who gave them, and an evening check-in" style="width: 280px; height: 590px; box-sizing: border-box; padding: 7px; border-radius: 46px; background: #1A1A17; box-shadow: 0 40px 70px -30px rgba(43, 43, 38, 0.5), 0 16px 30px -18px rgba(43, 43, 38, 0.4); font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #2B2B26;">
+<div style="position: relative; width: 100%; height: 100%; border-radius: 39px; overflow: hidden; background: #F6F4EC;">
+<div style="position: absolute; top: 10px; left: 50%; width: 76px; height: 22px; margin-left: -38px; border-radius: 11px; background: #0B0B0A;"></div>
+<div style="padding: 44px 16px 0; display: flex; flex-direction: column; gap: 10px;">
+
+<div style="display: flex; align-items: center; justify-content: space-between;">
+<span style="font-size: 10px; font-weight: 500; color: #66655D;">Tuesday, Nov 24</span>
+<div style="display: flex; align-items: center; gap: 6px;">
+<span style="display: inline-flex; align-items: center; gap: 4px; height: 24px; padding: 0 9px; border-radius: 999px; background: #F0D6CE; color: #8F3B2E; font-size: 10px; font-weight: 650;"><svg viewBox="0 0 24 24" style="width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><rect x="3.5" y="7" width="17" height="13" rx="2.5"></rect><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"></path><path d="M12 10.5v6"></path><path d="M9 13.5h6"></path></svg>Emergency</span>
+<span style="width: 24px; height: 24px; border-radius: 50%; background: #D5DECB; color: #3F5638; display: grid; place-items: center;"><svg viewBox="0 0 24 24" style="width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M5.5 4h3l1.5 4-2 1.3a11 11 0 0 0 6.7 6.7L16 14l4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3.5 6.2 2 2 0 0 1 5.5 4z"></path></svg></span>
+</div>
+</div>
+
+<div style="display: flex; align-items: center; gap: 10px; margin-top: 2px;">
+<img src="/assets/luna.png" alt="" style="width: 40px; height: 40px; border-radius: 50%; display: block; flex: none; box-shadow: 0 0 0 2px #FDFCF8;">
+<span style="font-size: 21px; font-weight: 650; letter-spacing: -0.02em;">Luna</span>
+<span style="width: 18px; height: 18px; border-radius: 50%; background: #E1E7D9; color: #3F5638; display: grid; place-items: center;"><svg viewBox="0 0 24 24" style="width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round;"><path d="m6 9 6 6 6-6"></path></svg></span>
+</div>
+
+<div style="display: flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 500; color: #55544D;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #9A4233;"></span>Weight down 0.4 kg</div>
+
+<div style="margin-top: 4px; height: 42px; border-radius: 999px; background: #5E7A52; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 13px; font-weight: 650; box-shadow: 0 10px 18px -10px rgba(62, 85, 55, 0.7);"><svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5.5 11a6.5 6.5 0 0 0 13 0"></path><path d="M12 17.5V21"></path></svg>Record vet visit</div>
+
+<div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px;">
+<span style="display: inline-flex; align-items: baseline; gap: 6px;"><span style="font-size: 14px; font-weight: 700;">Today's view</span><span style="font-size: 10.5px; font-weight: 600; color: #4C6643;">2 of 5</span></span>
+<span style="display: inline-flex; align-items: center; gap: 3px; height: 24px; padding: 0 10px; border-radius: 999px; background: #5E7A52; color: #FFFFFF; font-size: 10px; font-weight: 650;"><svg viewBox="0 0 24 24" style="width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round;"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>Log</span>
+</div>
+
+<div style="display: flex; flex-direction: column;">
+<div style="display: grid; grid-template-columns: 42px 18px minmax(0, 1fr); column-gap: 9px; align-items: start; padding: 6px 0;">
+<span style="font-size: 9.5px; color: #66655D; text-align: right; padding-top: 3px;">8:00 AM</span>
+<span style="width: 18px; height: 18px; border-radius: 50%; background: #5E7A52; color: #FFFFFF; display: grid; place-items: center;"><svg viewBox="0 0 24 24" style="width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 11px; font-weight: 600;">Benazepril · 5 mg</span><span style="font-size: 9.5px; color: #66655D;">Given by Sam · 08:02</span></span>
+</div>
+<div style="display: grid; grid-template-columns: 42px 18px minmax(0, 1fr); column-gap: 9px; align-items: start; padding: 6px 0;">
+<span style="font-size: 9.5px; color: #66655D; text-align: right; padding-top: 3px;">8:00 AM</span>
+<span style="width: 18px; height: 18px; border-radius: 50%; background: #5E7A52; color: #FFFFFF; display: grid; place-items: center;"><svg viewBox="0 0 24 24" style="width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 11px; font-weight: 600;">Levothyroxine · 0.4 mg</span><span style="font-size: 9.5px; color: #66655D;">Given by you · 08:05 · <span style="color: #9A4233; font-weight: 600;">Running low</span></span></span>
+</div>
+<div style="display: grid; grid-template-columns: 42px 18px minmax(0, 1fr); column-gap: 9px; align-items: start; padding: 6px 0;">
+<span style="font-size: 9.5px; color: #66655D; text-align: right; padding-top: 3px;">9:29 AM</span>
+<span style="width: 18px; height: 18px; border-radius: 50%; background: #E1E7D9; color: #4C6643; display: grid; place-items: center;"><svg viewBox="0 0 24 24" style="width: 11px; height: 11px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;"><path d="M3 12h4l2.5-6 5 12 2.5-6h4"></path></svg></span>
+<span style="display: flex; align-items: center; gap: 6px; padding-top: 2px;"><span style="font-size: 11px; font-weight: 600;">Limping</span><span style="padding: 1px 5px; border-radius: 4px; background: #E1E7D9; color: #3F5638; font-size: 8.5px; font-weight: 650;">Logged</span></span>
+</div>
+<div style="display: grid; grid-template-columns: 42px 18px minmax(0, 1fr); column-gap: 9px; align-items: start; padding: 6px 0;">
+<span style="font-size: 9.5px; font-weight: 700; text-align: right; padding-top: 3px;">5:00 PM</span>
+<span style="width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #8FA884; box-sizing: border-box;"></span>
+<span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 11px; font-weight: 600;">Evening check-in</span><span style="font-size: 9.5px; color: #66655D;">3 quick questions</span></span>
+</div>
+<div style="display: grid; grid-template-columns: 42px 18px minmax(0, 1fr); column-gap: 9px; align-items: center; padding: 4px 0;">
+<span style="font-size: 9.5px; font-weight: 700; text-align: right;">8:00 PM</span>
+<span style="width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #8FA884; box-sizing: border-box;"></span>
+<span style="display: flex; flex-direction: column; gap: 1px; padding: 7px 10px; border-radius: 12px; background: #FDFCF8; box-shadow: 0 6px 14px -8px rgba(43, 43, 38, 0.35);"><span style="font-size: 11px; font-weight: 600;">Levothyroxine · 0.4 mg</span><span style="font-size: 9.5px; color: #66655D;">With food</span></span>
+</div>
+<div style="display: grid; grid-template-columns: 42px 18px minmax(0, 1fr); column-gap: 9px; align-items: start; padding: 6px 0;">
+<span style="font-size: 9.5px; color: #66655D; text-align: right; padding-top: 3px;">9:00 PM</span>
+<span style="width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid #8FA884; box-sizing: border-box;"></span>
+<span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 11px; font-weight: 600;">Gabapentin · 100 mg</span><span style="font-size: 9.5px; color: #66655D;">Before bed</span></span>
+</div>
+</div>
+</div>
+
+<div style="position: absolute; left: 12px; right: 12px; bottom: 12px; height: 52px; border-radius: 26px; background: #FDFCF8; box-shadow: 0 8px 20px -8px rgba(43, 43, 38, 0.3); display: flex; align-items: center; justify-content: space-around; padding: 0 6px;">
+<span style="width: 50px; height: 40px; border-radius: 20px; background: #E1E7D9; color: #3F5638; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;"><svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M4 10.5 12 4l8 6.5V19a1.5 1.5 0 0 1-1.5 1.5H15v-6H9v6H5.5A1.5 1.5 0 0 1 4 19z"></path></svg><span style="font-size: 8px; font-weight: 650;">Home</span></span>
+<span style="width: 50px; height: 40px; color: #55544D; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;"><svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M3 12h4l2.5-6 5 12 2.5-6h4"></path></svg><span style="font-size: 8px; font-weight: 600;">Health</span></span>
+<span style="width: 50px; height: 40px; color: #55544D; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px;"><svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;"><path d="M3.5 7A2.5 2.5 0 0 1 6 4.5h3.5l2 2.5H18A2.5 2.5 0 0 1 20.5 9.5v8A2.5 2.5 0 0 1 18 20H6a2.5 2.5 0 0 1-2.5-2.5z"></path></svg><span style="font-size: 8px; font-weight: 600;">Records</span></span>
+<img src="/assets/luna.png" alt="" style="width: 26px; height: 26px; border-radius: 50%; display: block; flex: none; box-shadow: 0 0 0 2px #FDFCF8, 0 0 0 3px #E1E7D9;">
+</div>
+
+</div>
+</div>
+</div>
+<div aria-hidden="true" style="position: absolute; right: -24px; top: 112px; width: 178px; padding: 11px 13px; border-radius: 18px; background: #FDFCF8; box-shadow: 0 18px 40px -16px rgba(43, 43, 38, 0.4); display: flex; align-items: center; gap: 10px;">
+<span style="width: 32px; height: 32px; border-radius: 10px; background: #E1E7D9; color: #4C6643; display: grid; place-items: center; flex: none;"><svg viewBox="0 0 24 24" style="width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><path d="M12 3.5c.6 3.9 2.6 5.9 6.5 6.5-3.9.6-5.9 2.6-6.5 6.5-.6-3.9-2.6-5.9-6.5-6.5 3.9-.6 5.9-2.6 6.5-6.5z"></path></svg></span>
+<span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 13px; font-weight: 700;">Summary ready</span><span style="font-size: 12px; color: #66655D;">6 items from Nov 14</span></span>
+</div>
+<div aria-hidden="true" style="position: absolute; left: -28px; top: 548px; width: 206px; padding: 11px 13px; border-radius: 18px; background: #FDFCF8; box-shadow: 0 18px 40px -16px rgba(43, 43, 38, 0.4); display: flex; align-items: center; gap: 10px;">
+<span style="width: 32px; height: 32px; border-radius: 50%; background: #CDB894; color: #FFFFFF; display: grid; place-items: center; flex: none; font-size: 14px; font-weight: 700;">S</span>
+<span style="display: flex; flex-direction: column; gap: 1px; flex: 1;"><span style="font-size: 13px; font-weight: 700;">Sam gave Benazepril</span><span style="font-size: 12px; color: #66655D;">5 mg · 8:02 AM</span></span>
+<span style="width: 22px; height: 22px; border-radius: 50%; background: #5E7A52; color: #FFFFFF; display: grid; place-items: center; flex: none;"><svg viewBox="0 0 24 24" style="width: 13px; height: 13px; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="how" aria-labelledby="how-title" style="padding: 112px 24px; background: #EDE9DE;">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px;">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 48px;">
+<div style="flex: 1 1 520px; max-width: 700px; display: flex; flex-direction: column; gap: 16px;">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #4C6643;">How it works</p>
+<h2 id="how-title" style="margin: 0; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 750;">Vet visits move fast. Pawtio keeps up.</h2>
+</div>
+<p style="flex: 1 1 340px; max-width: 440px; margin: 0; font-size: 18px; line-height: 1.6; color: #55544D;">Between holding the leash and asking the right question, details slip. Pawtio catches them, so you never have to rebuild your pet's story from memory.</p>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 24px;">
+<li style="display: flex; flex-direction: column; gap: 12px; padding: 32px 28px 0; border-radius: 28px; background: #F6F4EC; border: 1px solid #DDD8CB; overflow: hidden;">
+<span style="font-size: 14px; font-weight: 700; letter-spacing: 0.06em; color: #4C6643;">01</span>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700;">Just hit record</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Tap record when the consult begins. It keeps going with your phone locked, and you can pause or stop right from the Dynamic Island.</p>
+<div style="height: 400px; margin-top: 20px; display: flex; justify-content: center; overflow: hidden;">
+<div role="img" aria-label="Pawtio recording a vet visit: a running timer, live sound levels, the topics it listens for, and a Stop and summarize button" style="width: 280px; height: 590px; box-sizing: border-box; padding: 7px; border-radius: 46px; background: #1A1A17; box-shadow: 0 40px 70px -30px rgba(43, 43, 38, 0.5), 0 16px 30px -18px rgba(43, 43, 38, 0.4); font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #2B2B26;">
+<div style="position: relative; width: 100%; height: 100%; border-radius: 39px; overflow: hidden; background: #F6F4EC;">
+<div style="position: absolute; top: 10px; left: 50%; width: 76px; height: 22px; margin-left: -38px; border-radius: 11px; background: #0B0B0A;"></div>
+<div style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; padding: 52px 16px 18px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center;">
+
+<span style="display: inline-flex; align-items: center; gap: 5px; font-size: 9px; font-weight: 700; letter-spacing: 0.12em; color: #9A4233;"><span style="width: 6px; height: 6px; border-radius: 50%; background: #9A4233;"></span>RECORDING</span>
+<span style="margin-top: 6px; font-size: 42px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.1; font-variant-numeric: tabular-nums;">12:48</span>
+
+<div style="margin-top: 12px; height: 36px; display: flex; align-items: center; gap: 2.5px;">
+<span style="width: 2.5px; height: 8px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 14px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 22px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 12px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 28px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 18px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 32px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 20px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 10px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 26px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 34px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 16px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 24px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 30px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 14px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 20px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 36px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 22px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 12px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 28px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 18px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 10px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 24px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 14px; border-radius: 2px; background: #2B2B26;"></span>
+<span style="width: 2.5px; height: 8px; border-radius: 2px; background: #2B2B26;"></span>
+</div>
+
+<div style="margin-top: 20px; width: 100%; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-radius: 14px; background: #FDFCF8; border: 1px solid #E8E4D9;">
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600;"><svg viewBox="0 0 24 24" style="width: 12px; height: 12px; fill: none; stroke: #4C6643; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;"><path d="M9 7h11"></path><path d="M9 12h11"></path><path d="M9 17h11"></path><path d="M4.5 7h.01"></path><path d="M4.5 12h.01"></path><path d="M4.5 17h.01"></path></svg>Prep &amp; questions</span>
+<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: 600; color: #66655D;">2<svg viewBox="0 0 24 24" style="width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round;"><path d="m6 15 6-6 6 6"></path></svg></span>
+</div>
+
+<div style="margin-top: 22px; display: flex; flex-wrap: wrap; justify-content: center; gap: 7px;">
+<span style="display: inline-flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FDFCF8; box-shadow: 0 4px 12px -6px rgba(43, 43, 38, 0.35); font-size: 10px; font-weight: 600;"><svg viewBox="0 0 24 24" style="width: 10px; height: 10px; fill: #5E7A52;"><path d="M12 3.5c.6 3.9 2.6 5.9 6.5 6.5-3.9.6-5.9 2.6-6.5 6.5-.6-3.9-2.6-5.9-6.5-6.5 3.9-.6 5.9-2.6 6.5-6.5z"></path></svg>Meds &amp; doses</span>
+<span style="display: inline-flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FDFCF8; box-shadow: 0 4px 12px -6px rgba(43, 43, 38, 0.35); font-size: 10px; font-weight: 600;"><svg viewBox="0 0 24 24" style="width: 10px; height: 10px; fill: #5E7A52;"><path d="M12 3.5c.6 3.9 2.6 5.9 6.5 6.5-3.9.6-5.9 2.6-6.5 6.5-.6-3.9-2.6-5.9-6.5-6.5 3.9-.6 5.9-2.6 6.5-6.5z"></path></svg>What to watch for</span>
+<span style="display: inline-flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FDFCF8; box-shadow: 0 4px 12px -6px rgba(43, 43, 38, 0.35); font-size: 10px; font-weight: 600;"><svg viewBox="0 0 24 24" style="width: 10px; height: 10px; fill: #5E7A52;"><path d="M12 3.5c.6 3.9 2.6 5.9 6.5 6.5-3.9.6-5.9 2.6-6.5 6.5-.6-3.9-2.6-5.9-6.5-6.5 3.9-.6 5.9-2.6 6.5-6.5z"></path></svg>Care plan</span>
+<span style="display: inline-flex; align-items: center; gap: 4px; padding: 6px 10px; border-radius: 999px; background: #FDFCF8; box-shadow: 0 4px 12px -6px rgba(43, 43, 38, 0.35); font-size: 10px; font-weight: 600;"><svg viewBox="0 0 24 24" style="width: 10px; height: 10px; fill: #5E7A52;"><path d="M12 3.5c.6 3.9 2.6 5.9 6.5 6.5-3.9.6-5.9 2.6-6.5 6.5-.6-3.9-2.6-5.9-6.5-6.5 3.9-.6 5.9-2.6 6.5-6.5z"></path></svg>Next visit</span>
+</div>
+
+<div style="flex: 1;"></div>
+
+<p style="margin: 0; font-size: 9.5px; line-height: 1.45; color: #66655D; text-align: center;">Audio stays on your device.<br/>Let your vet know they're being recorded.</p>
+<span style="margin-top: 10px; display: inline-flex; align-items: center; gap: 5px; padding: 5px 10px 5px 5px; border-radius: 999px; background: #ECE8DD; font-size: 10px; font-weight: 600;"><img src="/assets/luna.png" alt="" style="width: 15px; height: 15px; border-radius: 50%; display: block; flex: none;">Filing under Luna<svg viewBox="0 0 24 24" style="width: 9px; height: 9px; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round;"><path d="m6 15 6-6 6 6"></path></svg></span>
+<div style="margin-top: 12px; width: 100%; display: flex; gap: 8px;">
+<span style="width: 44px; height: 44px; flex: none; border-radius: 15px; background: #ECE8DD; color: #2B2B26; display: grid; place-items: center;"><svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round;"><path d="M9 6v12"></path><path d="M15 6v12"></path></svg></span>
+<span style="flex: 1; height: 44px; border-radius: 999px; background: #5E7A52; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 7px; font-size: 12.5px; font-weight: 650;"><svg viewBox="0 0 24 24" style="width: 11px; height: 11px;"><rect x="5" y="5" width="14" height="14" rx="3" fill="#FFFFFF"></rect></svg>Stop &amp; summarize</span>
+</div>
+<span style="margin-top: 10px; font-size: 10px; font-weight: 600; color: #9A4233;">Cancel recording</span>
+
+</div>
+</div>
+</div>
+</div>
+</li>
+<li style="display: flex; flex-direction: column; gap: 12px; padding: 32px 28px 0; border-radius: 28px; background: #F6F4EC; border: 1px solid #DDD8CB; overflow: hidden;">
+<span style="font-size: 14px; font-weight: 700; letter-spacing: 0.06em; color: #4C6643;">02</span>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700;">See what the vet said</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Pawtio transcribes on your device and writes a structured summary: what was discussed, what changed and what to watch. Tap anything to correct it.</p>
+<div style="height: 400px; margin-top: 20px; display: flex; justify-content: center; overflow: hidden;">
+<div role="img" aria-label="Pawtio's visit summary: the condition, medications, follow-ups and things to watch, each ready to add to your records" style="width: 280px; height: 590px; box-sizing: border-box; padding: 7px; border-radius: 46px; background: #1A1A17; box-shadow: 0 40px 70px -30px rgba(43, 43, 38, 0.55), 0 16px 30px -18px rgba(43, 43, 38, 0.45); font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #EDEBE3;">
+<div style="position: relative; width: 100%; height: 100%; border-radius: 39px; overflow: hidden; background: #1D1E19;">
+<div style="position: absolute; top: 10px; left: 50%; width: 76px; height: 22px; margin-left: -38px; border-radius: 11px; background: #000000;"></div>
+<div style="padding: 44px 13px 0; display: flex; flex-direction: column; gap: 8px;">
+
+<div style="display: flex; flex-direction: column; gap: 2px; padding: 0 2px 2px;">
+<span style="font-size: 17px; font-weight: 700; letter-spacing: -0.01em;">From this visit</span>
+<span style="font-size: 9.5px; color: #A9A79D;">Nov 14 · Dr. Amara Whitfield · Tap an item to correct it</span>
+</div>
+
+<div style="padding: 9px 10px; border-radius: 13px; background: #272822; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-size: 8.5px; font-weight: 700; letter-spacing: 0.1em; color: #9DBB8C;">CONDITION</span>
+<div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;">
+<span style="font-size: 10px; line-height: 1.4;">Chronic kidney disease, IRIS stage 2. Values slightly up since summer; described as stable.</span>
+<span style="flex: none; padding: 3px 8px; border-radius: 999px; background: #34362E; font-size: 9px; font-weight: 600;">Add</span>
+</div>
+</div>
+
+<div style="padding: 9px 10px; border-radius: 13px; background: #272822; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-size: 8.5px; font-weight: 700; letter-spacing: 0.1em; color: #9DBB8C;">MEDICATIONS</span>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+<span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 10.5px; font-weight: 600;">Benazepril</span><span style="font-size: 9px; color: #A9A79D;">5 mg · once daily · oral</span></span>
+<span style="flex: none; display: inline-flex; align-items: center; gap: 3px; padding: 3px 8px; border-radius: 999px; background: #34442F; color: #B9D3A9; font-size: 9px; font-weight: 650;"><svg viewBox="0 0 24 24" style="width: 9px; height: 9px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg>In meds</span>
+</div>
+<div style="height: 1px; background: #34352E;"></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+<span style="display: flex; flex-direction: column; gap: 1px;"><span style="font-size: 10.5px; font-weight: 600;">Omega-3 supplement</span><span style="font-size: 9px; color: #A9A79D;">1000 mg · twice daily</span></span>
+<span style="flex: none; padding: 3px 8px; border-radius: 999px; background: #34362E; font-size: 9px; font-weight: 600;">Add to meds</span>
+</div>
+</div>
+
+<div style="padding: 9px 10px; border-radius: 13px; background: #272822; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-size: 8.5px; font-weight: 700; letter-spacing: 0.1em; color: #9DBB8C;">FOLLOW-UP</span>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+<span style="font-size: 10px; line-height: 1.4;">Recheck bloodwork in 3 months.</span>
+<span style="flex: none; padding: 3px 8px; border-radius: 999px; background: #34362E; font-size: 9px; font-weight: 600;">Add to brief</span>
+</div>
+<div style="height: 1px; background: #34352E;"></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+<span style="font-size: 10px; line-height: 1.4;">Weigh Luna at home monthly.</span>
+<span style="flex: none; padding: 3px 8px; border-radius: 999px; background: #34362E; font-size: 9px; font-weight: 600;">Add to brief</span>
+</div>
+</div>
+
+<div style="padding: 9px 10px; border-radius: 13px; background: #272822; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-size: 8.5px; font-weight: 700; letter-spacing: 0.1em; color: #9DBB8C;">THINGS TO DO</span>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+<span style="font-size: 10px; line-height: 1.4;">Continue the renal-support diet.</span>
+<span style="flex: none; padding: 3px 8px; border-radius: 999px; background: #34362E; font-size: 9px; font-weight: 600;">Care plan</span>
+</div>
+<div style="height: 1px; background: #34352E;"></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+<span style="font-size: 10px; line-height: 1.4;">Keep fresh water available at all times.</span>
+<span style="flex: none; padding: 3px 8px; border-radius: 999px; background: #34362E; font-size: 9px; font-weight: 600;">Care plan</span>
+</div>
+</div>
+
+<div style="padding: 9px 10px; border-radius: 13px; background: #272822; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-size: 8.5px; font-weight: 700; letter-spacing: 0.1em; color: #9DBB8C;">WATCH FOR</span>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+<span style="font-size: 10px; line-height: 1.4;">Increased drinking or urination.</span>
+<span style="flex: none; padding: 3px 8px; border-radius: 999px; background: #34362E; font-size: 9px; font-weight: 600;">Add to check-in</span>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</li>
+<li style="display: flex; flex-direction: column; gap: 12px; padding: 32px 28px 0; border-radius: 28px; background: #F6F4EC; border: 1px solid #DDD8CB; overflow: hidden;">
+<span style="font-size: 14px; font-weight: 700; letter-spacing: 0.06em; color: #4C6643;">03</span>
+<h3 style="margin: 0; font-size: 24px; line-height: 1.2; letter-spacing: -0.02em; font-weight: 700;">Walk in ready</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Before the next appointment, Pawtio builds a brief from everything since: weight trend, active meds and questions worth asking. Share it as a PDF.</p>
+<div style="height: 400px; margin-top: 20px; display: flex; justify-content: center; overflow: hidden;">
+<div role="img" aria-label="Pawtio's pre-visit brief: weight trend, symptoms since the last visit, current medications and questions to ask, with a Share PDF button" style="width: 280px; height: 590px; box-sizing: border-box; padding: 7px; border-radius: 46px; background: #1A1A17; box-shadow: 0 40px 70px -30px rgba(43, 43, 38, 0.5), 0 16px 30px -18px rgba(43, 43, 38, 0.4); font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #2B2B26;">
+<div style="position: relative; width: 100%; height: 100%; border-radius: 39px; overflow: hidden; background: #F6F4EC;">
+<div style="position: absolute; top: 10px; left: 50%; width: 76px; height: 22px; margin-left: -38px; border-radius: 11px; background: #0B0B0A;"></div>
+<div style="padding: 44px 14px 0; display: flex; flex-direction: column; gap: 9px;">
+
+<div style="display: flex; align-items: center; justify-content: space-between;">
+<span style="width: 28px; height: 28px; border-radius: 50%; background: #ECE8DD; display: grid; place-items: center;"><svg viewBox="0 0 24 24" style="width: 12px; height: 12px; fill: none; stroke: #2B2B26; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round;"><path d="m15 6-6 6 6 6"></path></svg></span>
+<span style="display: inline-flex; align-items: center; gap: 4px; height: 26px; padding: 0 10px; border-radius: 999px; border: 1px solid #B7C6AC; color: #3F5638; font-size: 10px; font-weight: 650;"><svg viewBox="0 0 24 24" style="width: 11px; height: 11px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;"><path d="M12 15V4"></path><path d="m8 8 4-4 4 4"></path><path d="M6 12v6a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-6"></path></svg>Share PDF</span>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 3px;">
+<span style="font-size: 19px; font-weight: 700; letter-spacing: -0.015em;">Pre-visit brief</span>
+<span style="font-size: 9.5px; color: #66655D;">Dec 4 · Dr. Amara Whitfield · <span style="color: #4C6643; font-weight: 650;">in 10 days</span></span>
+</div>
+
+<span style="margin-top: 4px; font-size: 12px; font-weight: 700;">Since last visit · Nov 14</span>
+<div style="padding: 2px 11px; border-radius: 13px; background: #ECE9DF; display: flex; flex-direction: column;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #E0DCD1;">
+<span style="font-size: 10px; font-weight: 500;">Weight</span>
+<span style="display: inline-flex; align-items: center; gap: 3px; font-size: 10.5px; font-weight: 700;"><svg viewBox="0 0 24 24" style="width: 11px; height: 11px; fill: none; stroke: #9A4233; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round;"><path d="m4 7 6 6 3.5-3.5L20 16"></path><path d="M20 11.5V16h-4.5"></path></svg>0.4 kg</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #E0DCD1;">
+<span style="font-size: 10px; font-weight: 500;">Symptoms logged</span>
+<span style="font-size: 10px;">Itching 1× · Limping 1×</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 3px; padding: 8px 0;">
+<span style="font-size: 8.5px; font-weight: 700; letter-spacing: 0.1em; color: #66655D;">FLAGGED LAST TIME</span>
+<span style="font-size: 10px;">• Any vomiting</span>
+</div>
+</div>
+
+<span style="font-size: 12px; font-weight: 700;">Medications</span>
+<div style="padding: 10px; border-radius: 13px; background: #ECE9DF; display: flex; flex-wrap: wrap; gap: 5px;">
+<span style="padding: 4px 8px; border-radius: 999px; background: #DDD9CE; font-size: 9.5px; font-weight: 600;">Gabapentin · new</span>
+<span style="padding: 4px 8px; border-radius: 999px; background: #DDD9CE; font-size: 9.5px; font-weight: 600;">Levothyroxine · new</span>
+<span style="padding: 4px 8px; border-radius: 999px; background: #DDD9CE; font-size: 9.5px; font-weight: 600;">Benazepril</span>
+</div>
+
+<span style="font-size: 12px; font-weight: 700;">Questions to ask</span>
+<div style="padding: 2px 11px; border-radius: 13px; background: #ECE9DF; display: flex; flex-direction: column;">
+<div style="display: flex; align-items: flex-start; gap: 7px; padding: 8px 0; border-bottom: 1px solid #E0DCD1;">
+<span style="width: 14px; height: 14px; flex: none; border-radius: 50%; background: #5E7A52; color: #FFFFFF; font-size: 9px; font-weight: 700; display: grid; place-items: center;">?</span>
+<span style="font-size: 10px; line-height: 1.4;">Is the weight loss expected on the renal diet?</span>
+</div>
+<div style="display: flex; align-items: flex-start; gap: 7px; padding: 8px 0;">
+<span style="width: 14px; height: 14px; flex: none; border-radius: 50%; background: #5E7A52; color: #FFFFFF; font-size: 9px; font-weight: 700; display: grid; place-items: center;">?</span>
+<span style="font-size: 10px; line-height: 1.4;">Should we recheck her blood pressure?</span>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</section>
+
+<section aria-labelledby="inside-title" style="padding: 112px 24px;">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px;">
+<div style="max-width: 720px; display: flex; flex-direction: column; gap: 16px;">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #4C6643;">What's inside</p>
+<h2 id="inside-title" style="margin: 0; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 750;">Your pet's whole health story, in one place.</h2>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: 20px;">
+<article style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #FDFCF8; border: 1px solid #E4E0D4;">
+<span style="width: 46px; height: 46px; border-radius: 14px; background: #E1E7D9; color: #4C6643; display: grid; place-items: center;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7.5V12l3 2"></path></svg></span>
+<h3 style="margin: 4px 0 0; font-size: 20px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 700;">Every visit, on file</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Visits, medications and prescription diets, lab results, vaccinations, notes and photos, all in one searchable timeline.</p>
+</article>
+<article style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #FDFCF8; border: 1px solid #E4E0D4;">
+<span style="width: 46px; height: 46px; border-radius: 14px; background: #E1E7D9; color: #4C6643; display: grid; place-items: center;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><path d="M4 8V6.5A2.5 2.5 0 0 1 6.5 4H8"></path><path d="M16 4h1.5A2.5 2.5 0 0 1 20 6.5V8"></path><path d="M20 16v1.5a2.5 2.5 0 0 1-2.5 2.5H16"></path><path d="M8 20H6.5A2.5 2.5 0 0 1 4 17.5V16"></path><path d="M8 10h8"></path><path d="M8 14h5"></path></svg></span>
+<h3 style="margin: 4px 0 0; font-size: 20px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 700;">Scan instead of typing</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Snap a lab report, prescription or vaccine certificate and Pawtio fills in the details for you.</p>
+</article>
+<article style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #FDFCF8; border: 1px solid #E4E0D4;">
+<span style="width: 46px; height: 46px; border-radius: 14px; background: #E1E7D9; color: #4C6643; display: grid; place-items: center;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><path d="M4.5 18.5V7a2.5 2.5 0 0 1 2.5-2.5h10A2.5 2.5 0 0 1 19.5 7v7a2.5 2.5 0 0 1-2.5 2.5H8.5z"></path><path d="M8.5 9.5h7"></path><path d="M8.5 13h4.5"></path></svg></span>
+<h3 style="margin: 4px 0 0; font-size: 20px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 700;">Ask Pawtio</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Ask about your pet's records in plain language, like when a medication started or what has changed since the last visit.</p>
+</article>
+<article style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #FDFCF8; border: 1px solid #E4E0D4;">
+<span style="width: 46px; height: 46px; border-radius: 14px; background: #E1E7D9; color: #4C6643; display: grid; place-items: center;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><circle cx="9" cy="8.5" r="3.2"></circle><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"></path><circle cx="17" cy="9.5" r="2.6"></circle><path d="M15.8 14.3a4.6 4.6 0 0 1 4.7 5.2"></path></svg></span>
+<h3 style="margin: 4px 0 0; font-size: 20px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 700;">Care as a team</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Invite a partner, family member or sitter. When someone gives a dose, everyone sees it and who gave it.</p>
+</article>
+<article style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #FDFCF8; border: 1px solid #E4E0D4;">
+<span style="width: 46px; height: 46px; border-radius: 14px; background: #E1E7D9; color: #4C6643; display: grid; place-items: center;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><path d="M3 12h4l2.5-6 5 12 2.5-6h4"></path></svg></span>
+<h3 style="margin: 4px 0 0; font-size: 20px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 700;">Built for chronic care</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Dose reminders, vaccinations due, condition trackers, a quick evening check-in and injection-site rotation.</p>
+</article>
+<article style="display: flex; flex-direction: column; gap: 14px; padding: 28px; border-radius: 24px; background: #FDFCF8; border: 1px solid #E4E0D4;">
+<span style="width: 46px; height: 46px; border-radius: 14px; background: #E1E7D9; color: #4C6643; display: grid; place-items: center;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><path d="M14 3.5H7.5A2.5 2.5 0 0 0 5 6v12a2.5 2.5 0 0 0 2.5 2.5h9A2.5 2.5 0 0 0 19 18V8.5z"></path><path d="M14 3.5v5h5"></path><path d="M9 13h6"></path><path d="M9 16.5h4"></path></svg></span>
+<h3 style="margin: 4px 0 0; font-size: 20px; line-height: 1.25; letter-spacing: -0.01em; font-weight: 700;">Records, ready to share</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">A vaccine record for boarding, an emergency snapshot for sitters, and a records pack when you move to a new clinic.</p>
+</article>
+</div>
+<a href="/features/" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 650; text-decoration: none; color: #4C6643;">Explore every feature, with tips<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none;"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</section>
+
+<section aria-labelledby="chronic-title" style="padding: 112px 24px; background: #EDE9DE; overflow: hidden;">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; gap: 56px 72px;">
+<div style="flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #4C6643;">Built for the long haul</p>
+<h2 id="chronic-title" style="margin: 0; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 750;">For the pets who need a little more care.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #55544D;">Kidney disease, diabetes, arthritis, heart conditions: whatever your pet is managing over months and years, Pawtio keeps the daily routine on track and the history in order.</p>
+<ul style="list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 14px;">
+<li style="display: flex; align-items: flex-start; gap: 12px; font-size: 17px; line-height: 1.5;"><span style="width: 24px; height: 24px; border-radius: 50%; background: #5E7A52; color: #FFFFFF; display: grid; place-items: center; flex: none; margin-top: 1px;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span><span><strong style="font-weight: 700;">Dose reminders</strong> that show who gave what, and when</span></li>
+<li style="display: flex; align-items: flex-start; gap: 12px; font-size: 17px; line-height: 1.5;"><span style="width: 24px; height: 24px; border-radius: 50%; background: #5E7A52; color: #FFFFFF; display: grid; place-items: center; flex: none; margin-top: 1px;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span><span><strong style="font-weight: 700;">A quick evening check-in</strong>, so small changes don't slip by</span></li>
+<li style="display: flex; align-items: flex-start; gap: 12px; font-size: 17px; line-height: 1.5;"><span style="width: 24px; height: 24px; border-radius: 50%; background: #5E7A52; color: #FFFFFF; display: grid; place-items: center; flex: none; margin-top: 1px;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span><span><strong style="font-weight: 700;">Condition trackers and lab trends</strong> across months, not just visits</span></li>
+<li style="display: flex; align-items: flex-start; gap: 12px; font-size: 17px; line-height: 1.5;"><span style="width: 24px; height: 24px; border-radius: 50%; background: #5E7A52; color: #FFFFFF; display: grid; place-items: center; flex: none; margin-top: 1px;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span><span><strong style="font-weight: 700;">Injection-site rotation</strong> for pets on regular injections</span></li>
+</ul>
+</div>
+<div role="img" aria-label="Examples from Pawtio: today's doses showing who gave them, an evening check-in, and a weight trend" style="flex: 1 1 420px; min-width: 0; max-width: 520px; display: flex; flex-direction: column; gap: 16px;">
+<div style="padding: 22px 22px 10px; border-radius: 24px; background: #FDFCF8; box-shadow: 0 24px 48px -28px rgba(43, 43, 38, 0.4); display: flex; flex-direction: column;">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding-bottom: 12px;"><span style="font-size: 17px; font-weight: 700;">Today's doses</span><span style="font-size: 13px; font-weight: 650; color: #4C6643;">2 of 3 given</span></div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #ECE8DE;">
+<span style="width: 28px; height: 28px; border-radius: 50%; background: #5E7A52; color: #FFFFFF; display: grid; place-items: center; flex: none;"><svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 15px; font-weight: 650;">Benazepril · 5 mg</span><span style="font-size: 13px; color: #66655D;">Given by Sam · 8:02 AM</span></span>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #ECE8DE;">
+<span style="width: 28px; height: 28px; border-radius: 50%; background: #5E7A52; color: #FFFFFF; display: grid; place-items: center; flex: none;"><svg viewBox="0 0 24 24" style="width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round;"><path d="m5 12.5 4.5 4.5L19 7.5"></path></svg></span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 15px; font-weight: 650;">Levothyroxine · 0.4 mg</span><span style="font-size: 13px; color: #66655D;">Given by you · 8:05 AM</span></span>
+<span style="padding: 4px 10px; border-radius: 999px; background: #F0D6CE; color: #8F3B2E; font-size: 12px; font-weight: 650; flex: none;">Running low</span>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid #ECE8DE;">
+<span style="width: 28px; height: 28px; border-radius: 50%; border: 2px solid #8FA884; flex: none;"></span>
+<span style="flex: 1; display: flex; flex-direction: column; gap: 2px;"><span style="font-size: 15px; font-weight: 650;">Levothyroxine · 0.4 mg</span><span style="font-size: 13px; color: #66655D;">Due 8:00 PM · With food</span></span>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+<div style="flex: 1 1 220px; padding: 22px; border-radius: 24px; background: #5E7A52; color: #FFFFFF; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-size: 17px; font-weight: 700;">Evening check-in</span>
+<span style="font-size: 14px; color: #FFFFFF;">3 quick questions · 5:00 PM</span>
+<span style="align-self: flex-start; margin-top: 12px; padding: 8px 16px; border-radius: 999px; background: #FDFCF8; color: #3F5638; font-size: 14px; font-weight: 700;">Start</span>
+</div>
+<div style="flex: 1 1 180px; padding: 22px; border-radius: 24px; background: #FDFCF8; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 24px 48px -32px rgba(43, 43, 38, 0.4);">
+<span style="font-size: 14px; font-weight: 600; color: #66655D;">Weight</span>
+<span style="display: flex; align-items: center; gap: 6px; font-size: 30px; font-weight: 750; letter-spacing: -0.02em;"><svg viewBox="0 0 24 24" aria-hidden="true" style="width: 24px; height: 24px; fill: none; stroke: #9A4233; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round;"><path d="m4 7 6 6 3.5-3.5L20 16"></path><path d="M20 11.5V16h-4.5"></path></svg>0.4 kg</span>
+<span style="font-size: 13px; color: #66655D;">since the Nov 14 visit</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="privacy-title" style="padding: 112px 24px; background: #1D1E19; color: #EDEBE3;">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px;">
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px 64px;">
+<div style="flex: 1 1 520px; max-width: 660px; display: flex; flex-direction: column; gap: 16px;">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9DBB8C;">Private by default</p>
+<h2 id="privacy-title" style="margin: 0; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 750; color: #F6F4EC;">Your audio stays on your phone.</h2>
+</div>
+<p style="flex: 1 1 340px; max-width: 460px; margin: 0; font-size: 18px; line-height: 1.6; color: #BDBBB1;">Recordings are transcribed on your device and never uploaded. Once a summary is written, you choose whether to keep or delete each one.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr)); gap: 16px;">
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 22px; background: #272822; border: 1px solid #34352E;">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 26px; height: 26px; fill: none; stroke: #9DBB8C; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><rect x="5" y="10.5" width="14" height="10" rx="2.5"></rect><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"></path></svg>
+<h3 style="margin: 4px 0 0; font-size: 19px; line-height: 1.3; font-weight: 700; color: #F6F4EC;">Transcribed on-device</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #BDBBB1;">The conversation is turned into text on your iPhone. The audio itself never leaves it.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 22px; background: #272822; border: 1px solid #34352E;">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 26px; height: 26px; fill: none; stroke: #9DBB8C; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><path d="M12 3.5 5 6.2v5.3c0 4.2 2.9 7.6 7 9 4.1-1.4 7-4.8 7-9V6.2z"></path><path d="m9 12 2.2 2.2L15.5 10"></path></svg>
+<h3 style="margin: 4px 0 0; font-size: 19px; line-height: 1.3; font-weight: 700; color: #F6F4EC;">Never used for training</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #BDBBB1;">Summaries, scans and Ask Pawtio answers run on a paid AI tier that doesn't use your data to train models.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 22px; background: #272822; border: 1px solid #34352E;">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 26px; height: 26px; fill: none; stroke: #9DBB8C; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><path d="M12 4v11"></path><path d="m7.5 10.5 4.5 4.5 4.5-4.5"></path><path d="M5 19.5h14"></path></svg>
+<h3 style="margin: 4px 0 0; font-size: 19px; line-height: 1.3; font-weight: 700; color: #F6F4EC;">Yours to export or delete</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #BDBBB1;">Export all of your data whenever you like, or delete your account and everything in it from Settings.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; padding: 26px; border-radius: 22px; background: #272822; border: 1px solid #34352E;">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 26px; height: 26px; fill: none; stroke: #9DBB8C; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;"><circle cx="12" cy="12" r="8.5"></circle><path d="m6 6 12 12"></path></svg>
+<h3 style="margin: 4px 0 0; font-size: 19px; line-height: 1.3; font-weight: 700; color: #F6F4EC;">No ads, no data brokers</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #BDBBB1;">Your pet's records belong to you. Nobody else gets a copy.</p>
+</div>
+</div>
+<a href="/privacy" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; font-size: 17px; font-weight: 650; text-decoration: none; color: #B9D3A9;">Read the privacy policy<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none;"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+</section>
+
+<section aria-labelledby="faq-title" style="padding: 112px 24px;">
+<div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px 80px;">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; align-items: flex-start; gap: 18px;">
+<p style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #4C6643;">Good to know</p>
+<h2 id="faq-title" style="margin: 0; font-size: clamp(32px, 4.2vw, 52px); line-height: 1.06; letter-spacing: -0.03em; font-weight: 750;">Questions, answered.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #55544D;">The short version of what people ask most.</p>
+<a href="/faq/" style="margin-top: 6px; display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; border-radius: 999px; border: 1.5px solid #CFCABD; color: #2B2B26; font-size: 16px; font-weight: 650; text-decoration: none;">See all questions<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none;"><path d="M5 12h14"></path><path d="m13 6 6 6-6 6"></path></svg></a>
+</div>
+<div style="flex: 2 1 560px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 36px 40px;">
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 22px; border-top: 1px solid #DDD8CB;">
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 700;">Is Pawtio free?</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Yes. Pawtio is free to download on the App Store for iPhone.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 22px; border-top: 1px solid #DDD8CB;">
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 700;">Should I tell my vet I'm recording?</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Yes, always ask first. Pawtio reminds you on the recording screen, and most vets are glad you want to remember the details.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 22px; border-top: 1px solid #DDD8CB;">
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 700;">Does Pawtio give medical advice?</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">No. Pawtio organizes what your vet says, and your vet makes the calls. If your pet is unwell, call your vet.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding-top: 22px; border-top: 1px solid #DDD8CB;">
+<h3 style="margin: 0; font-size: 19px; line-height: 1.3; font-weight: 700;">Can my family help with care?</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #55544D;">Yes. Invite a partner, family member or sitter to your care circle, and they can help with every pet you share.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="cta-title" style="padding: 0 24px 112px;">
+<div style="max-width: 1200px; margin: 0 auto; padding: clamp(36px, 6vw, 72px); border-radius: 36px; background: #5E7A52; color: #FFFFFF; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px;">
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+<div style="width: 76px; height: 76px; border-radius: 20px; background: #FFFFFF; display: grid; place-items: center; box-shadow: 0 14px 28px -14px rgba(0, 0, 0, 0.45);">
+<div style="width: 54px; height: 54px;">
+<svg viewBox="13 16 94 89" role="img" aria-label="Pawtio app icon" style="display: block; width: 100%; height: 100%;"><defs><linearGradient id="pawG-cta" x1="0.15" y1="0" x2="0.85" y2="1"><stop offset="0" style="stop-color: #9AB78A;"></stop><stop offset="0.5" style="stop-color: #6C8B5E;"></stop><stop offset="1" style="stop-color: #55734B;"></stop></linearGradient></defs><g fill="url(#pawG-cta)"><ellipse cx="27" cy="55" rx="11.4" ry="14.6" transform="rotate(-30 27 55)"></ellipse><ellipse cx="46.2" cy="33.5" rx="12.4" ry="16" transform="rotate(-8 46.2 33.5)"></ellipse><ellipse cx="73.8" cy="33.5" rx="12.4" ry="16" transform="rotate(8 73.8 33.5)"></ellipse><ellipse cx="93" cy="55" rx="11.4" ry="14.6" transform="rotate(30 93 55)"></ellipse><path d="M60 47.5C51 47.5 44.5 53 38.5 61.5C31 72 24.5 81 25.5 91C26.5 100 33.5 103.5 41 101.8C48 100.3 53.5 99 60 99C66.5 99 72 100.3 79 101.8C86.5 103.5 93.5 100 94.5 91C95.5 81 89 72 81.5 61.5C75.5 53 69 47.5 60 47.5Z"></path></g><g fill="#F7F8F3"><rect x="41.8" y="71" width="4.4" height="10" rx="2.2"></rect><rect x="49.8" y="66" width="4.4" height="20" rx="2.2"></rect><rect x="57.8" y="61.5" width="4.4" height="29" rx="2.2"></rect><rect x="65.8" y="66" width="4.4" height="20" rx="2.2"></rect><rect x="73.8" y="71" width="4.4" height="10" rx="2.2"></rect></g></svg>
+</div>
+</div>
+<h2 id="cta-title" style="margin: 0; font-size: clamp(34px, 4.4vw, 56px); line-height: 1.04; letter-spacing: -0.035em; font-weight: 750; color: #FFFFFF;">Walk into the next visit ready.</h2>
+<p style="margin: 0; max-width: 520px; font-size: 19px; line-height: 1.55; color: #FFFFFF;">Free on iPhone. Add your pet today, then hit record at your next appointment.</p>
+<a href="https://apps.apple.com/app/id6791683099" style="display: inline-flex; align-items: center; gap: 10px; min-height: 54px; padding: 0 26px 0 22px; border-radius: 999px; background: #FDFCF8; color: #3F5638; font-size: 17px; font-weight: 700; text-decoration: none;">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none;"><rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect><path d="M11 18.5h2"></path></svg>
+Get Pawtio for iPhone
+</a>
+</div>
+<div style="flex: 0 1 260px; display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 24px; border-radius: 24px; background: #526C47; border: 1px solid rgba(255, 255, 255, 0.18);">
+<div role="img" aria-label="QR code placeholder for the App Store link" style="width: 168px; height: 168px; padding: 16px; border-radius: 16px; background: #FDFCF8; border: 2px dashed #9DB58F; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; color: #4C6643;">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round;"><rect x="4" y="4" width="6" height="6" rx="1"></rect><rect x="14" y="4" width="6" height="6" rx="1"></rect><rect x="4" y="14" width="6" height="6" rx="1"></rect><path d="M14 14h2v2h-2z"></path><path d="M18 18h2v2h-2z"></path><path d="M14 18h2"></path><path d="M18 14h2"></path></svg>
+<span style="font-size: 13px; font-weight: 650; line-height: 1.35;">[QR code to the App Store link]</span>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.45; text-align: center; color: #FFFFFF;">On a computer? Scan with your iPhone camera.</p>
+</div>
+</div>
+</section>
+
+</main>
+<footer style="width: 100%; box-sizing: border-box; font-family: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #EDEBE3; background: #1D1E19;">
+<div style="max-width: 1248px; margin: 0 auto; padding: 72px 24px 40px; box-sizing: border-box; display: flex; flex-direction: column; gap: 56px;">
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 48px 64px;">
+<div style="flex: 1 1 300px; max-width: 380px; display: flex; flex-direction: column; align-items: flex-start; gap: 18px;">
+<a href="/" aria-label="Pawtio home" style="display: inline-block; padding: 2px; color: #F6F4EC; text-decoration: none; font-size: 30px; font-weight: 750; letter-spacing: -0.035em; line-height: 1;">
+<img src="/assets/wordmark-dark.png" alt="" width="104" height="37" style="display: block; height: 37px; width: auto;">
+</a>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #BDBBB1;">A calm, chronic-care-first pet health tracker for iPhone.</p>
+<a href="https://apps.apple.com/app/id6791683099" style="display: inline-flex; align-items: center; gap: 8px; min-height: 46px; padding: 0 20px 0 16px; border-radius: 999px; background: #5E7A52; color: #FFFFFF; font-size: 15px; font-weight: 650; text-decoration: none;">
+<svg viewBox="0 0 24 24" aria-hidden="true" style="width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none;"><rect x="7" y="2.5" width="10" height="19" rx="2.5"></rect><path d="M11 18.5h2"></path></svg>
+Get Pawtio for iPhone
+</a>
+</div>
+
+<div style="flex: 2 1 560px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); gap: 36px 32px;">
+<nav aria-label="Pawtio" style="display: flex; flex-direction: column; gap: 14px;">
+<h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9DBB8C;">Pawtio</h2>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
+<li><a href="/" style="color: #EDEBE3; text-decoration: none;">Home</a></li>
+<li><a href="/features/" style="color: #EDEBE3; text-decoration: none;">Features &amp; guide</a></li>
+<li><a href="/faq/" style="color: #EDEBE3; text-decoration: none;">FAQ</a></li>
+<li><a href="https://apps.apple.com/app/id6791683099" style="color: #EDEBE3; text-decoration: none;">App Store</a></li>
+</ul>
+</nav>
+<nav aria-label="Company" style="display: flex; flex-direction: column; gap: 14px;">
+<h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9DBB8C;">Company</h2>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
+<li><a href="/about/" style="color: #EDEBE3; text-decoration: none;">About</a></li>
+<li><a href="/contact/" style="color: #EDEBE3; text-decoration: none;">Contact</a></li>
+<li><a href="/contact/?topic=feature" style="color: #EDEBE3; text-decoration: none;">Request a feature</a></li>
+</ul>
+</nav>
+<nav aria-label="Legal" style="display: flex; flex-direction: column; gap: 14px;">
+<h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9DBB8C;">Legal</h2>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
+<li><a href="/privacy" style="color: #EDEBE3; text-decoration: none;">Privacy Policy</a></li>
+<li><a href="/terms" style="color: #EDEBE3; text-decoration: none;">Terms of Service</a></li>
+<li><a href="/delete-account" style="color: #EDEBE3; text-decoration: none;">Delete your account</a></li>
+</ul>
+</nav>
+<nav aria-label="Social" style="display: flex; flex-direction: column; gap: 14px;">
+<h2 style="margin: 0; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #9DBB8C;">Follow</h2>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 15px;">
+<li><a href="#" style="color: #EDEBE3; text-decoration: none;">Instagram</a></li>
+<li><a href="#" style="color: #EDEBE3; text-decoration: none;">TikTok</a></li>
+<li><a href="#" style="color: #EDEBE3; text-decoration: none;">Reddit</a></li>
+<li><a href="#" style="color: #EDEBE3; text-decoration: none;">X</a></li>
+</ul>
+</nav>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 18px; padding-top: 28px; border-top: 1px solid #34352E;">
+<p style="margin: 0; max-width: 880px; font-size: 14px; line-height: 1.6; color: #A9A79D;">Pawtio is not a diagnostic tool and does not provide veterinary advice. It organizes what your vet says; your vet makes the calls. If your pet is unwell, call your vet.</p>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; font-size: 14px; color: #A9A79D;">
+<span>© 2026 Pawtio</span>
+<a href="mailto:support@pawtio.app" style="color: #EDEBE3; text-decoration: none;">support@pawtio.app</a>
+</div>
+</div>
+
+</div>
+</footer>
+</div>
 </body>
 </html>
